@@ -36,8 +36,6 @@ class MyGame(arcade.Window):
 
     def on_update(self, delta_time):
         if self.game_state == game_state.GameState.ROUND_ACTIVE and self.has_chosen_attack == True:
-            if self.compy_attack.nbr_swaps == 6:
-                self.update_compy_attack = False
             self.pc_attack = random.randint(0, 2)
             if self.pc_attack == 0:
                 self.computer_attack_type = attack_animation.AttackType.PAPER
